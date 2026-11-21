@@ -1,0 +1,9 @@
+# TYPE vllm:num_requests_running gauge
+# TYPE vllm:num_requests_waiting gauge
+# TYPE vllm:gpu_cache_usage_sys gauge
+vllm:num_requests_running{gpu="0",model_name="demo"} 2.0 1704067200000
+vllm:num_requests_waiting{gpu="0",model_name="demo"} 0.0 1704067200000
+vllm:gpu_cache_usage_sys{gpu="0",model_name="demo"} 0.30 1704067200000
+vllm:num_requests_running{gpu="0",model_name="demo"} 4.0 1704067210000
+vllm:num_requests_waiting{gpu="0",model_name="demo"} 1.0 1704067210000
+vllm:gpu_cache_usage_sys{gpu="0",model_name="demo"} 0.62 1704067210000
