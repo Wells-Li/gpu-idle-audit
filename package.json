@@ -1,0 +1,16 @@
+{
+  "name": "gpu-idle-audit",
+  "version": "1.0.0",
+  "description": "零依赖 Node CLI：从 GPU 利用率导出数据算「每月为没干活的 GPU 付了多少钱」，金额一律为上界",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "demo": "node src/cli.js demo",
+    "test": "node --test test.js"
+  },
+  "license": "MIT",
+  "keywords": ["gpu", "cost", "utilization", "finops", "nvidia-smi", "dcgm", "vllm", "inference"],
+  "repository": { "type": "git", "url": "" }
+}

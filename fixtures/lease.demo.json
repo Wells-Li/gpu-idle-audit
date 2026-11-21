@@ -1,0 +1,9 @@
+[
+  { "gpu_id": "0", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "1", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "2", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "3", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "4", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "6", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" },
+  { "gpu_id": "7", "gpu_model": "A100", "cost_cny_per_hour": 28.0, "note": "demo 租金，客户自填" }
+]
