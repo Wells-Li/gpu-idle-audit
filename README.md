@@ -4,6 +4,9 @@
 
 **你已经付了钱的 GPU，有多少小时在空转？按你的租金折算，那是多少钱？**
 
+> **English TL;DR** — A zero-dependency Node CLI that answers one question: *of the GPU-hours you already paid for, how many did no work, and what did they cost at your own lease rate?* Feed it a `nvidia-smi dmon` / DCGM / vLLM-metrics dump plus your per-card hourly price; it reports idle hours and cost **as an upper bound**, split into "reclaimable now", "needs config change" and "needs re-architecture". It never phones home, never guesses prices, and never prints a "save 40%" style claim. Runs offline on Node ≥20 with zero `npm install`.
+
+
 零依赖（只用 Node ≥20 内置模块）、纯本地、不联网、不猜价。输入你已有的利用率导出和每卡租金，输出一页报告：每张卡的计费小时、有效小时、空转小时、白烧金额**上界**，以及它属于「立即能回收」还是「要改配置」还是「要改架构」。
 
 ## 为什么写这个
@@ -107,3 +110,16 @@ node src/cli.js --util dmon.txt --price A100=28.0 --min-replicas 4 --out ./repor
 ## 许可
 
 MIT。
+
+---
+
+<!-- 发布前必填：这一段是 inbound 的唯一入口，空着等于没人能找到你 -->
+
+## 需要有人帮你把这张表跑起来？
+
+工具是开源的，你可以自己跑。如果你想让人替你把「跑完之后该改哪三个参数、改完怎么不回滚、下个月怎么盯着它别涨回去」这一段做掉，可以联系：
+
+- 联系方式：**（待填：邮箱 / 微信 / 即刻）**
+- 形式：按月兼职，3 个月起；不含 7×24 on-call
+- 先决条件：你能提供 ≥24 小时的 `nvidia-smi dmon` 导出和每卡单价。**先免费跑一次诊断**，看完表再决定要不要谈。
+
