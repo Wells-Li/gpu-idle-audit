@@ -1,0 +1,26 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: No dependencies to install
+        run: test ! -d node_modules
+      - name: Run tests
+        run: node --test test.js
+      - name: Demo end-to-end
+        run: node src/cli.js demo --out /tmp/demo-out
+      - name: Help works
+        run: node src/cli.js --help

@@ -1,5 +1,7 @@
 # gpu-idle-audit
 
+[![test](https://github.com/Wells-Li/gpu-idle-audit/actions/workflows/test.yml/badge.svg)](https://github.com/Wells-Li/gpu-idle-audit/actions/workflows/test.yml)
+
 **你已经付了钱的 GPU，有多少小时在空转？按你的租金折算，那是多少钱？**
 
 零依赖（只用 Node ≥20 内置模块）、纯本地、不联网、不猜价。输入你已有的利用率导出和每卡租金，输出一页报告：每张卡的计费小时、有效小时、空转小时、白烧金额**上界**，以及它属于「立即能回收」还是「要改配置」还是「要改架构」。
