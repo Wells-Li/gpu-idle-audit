@@ -9,6 +9,9 @@
 
 零依赖（只用 Node ≥20 内置模块）、纯本地、不联网、不猜价。输入你已有的利用率导出和每卡租金，输出一页报告：每张卡的计费小时、有效小时、空转小时、白烧金额**上界**，以及它属于「立即能回收」还是「要改配置」还是「要改架构」。
 
+**[服务说明 SERVICES.md](SERVICES.md)** · **[数据边界 PRIVACY.md](PRIVACY.md)** · **[自证跑测手册 BENCHMARK.md](BENCHMARK.md)** · **[提诊断请求](https://github.com/Wells-Li/gpu-idle-audit/issues/new?template=diagnosis-request.md)**
+
+
 ## 为什么写这个
 
 公开数据里，这件事的浪费量级大得反常：
@@ -113,13 +116,13 @@ MIT。
 
 ---
 
-<!-- 发布前必填：这一段是 inbound 的唯一入口，空着等于没人能找到你 -->
-
 ## 需要有人帮你把这张表跑起来？
 
-工具是开源的，你可以自己跑。如果你想让人替你把「跑完之后该改哪三个参数、改完怎么不回滚、下个月怎么盯着它别涨回去」这一段做掉，可以联系：
+工具是开源的，你可以自己跑。如果你想让人替你把「跑完之后该改哪三个参数、改完怎么不回滚、下个月怎么盯着它别涨回去」这一段做掉：
 
-- 联系方式：**（待填：邮箱 / 微信 / 即刻）**
-- 形式：按月兼职，3 个月起；不含 7×24 on-call
-- 先决条件：你能提供 ≥24 小时的 `nvidia-smi dmon` 导出和每卡单价。**先免费跑一次诊断**，看完表再决定要不要谈。
+- **服务说明**（做什么 / 不做什么 / 怎么验收）：[SERVICES.md](SERVICES.md)
+- **数据边界**（可直接给你的安全同事看）：[PRIVACY.md](PRIVACY.md)
+- **联系**：GitHub [@Wells-Li](https://github.com/Wells-Li)，或提一个 [诊断请求 Issue](https://github.com/Wells-Li/gpu-idle-audit/issues/new?template=diagnosis-request.md)
+- **先免费跑一次诊断**：你提供 ≥24 小时的 `nvidia-smi dmon` 导出和每卡单价，我回你一份报告。看完表再决定要不要谈——表上没有值得回收的钱，我不会向你报价。
+
 
